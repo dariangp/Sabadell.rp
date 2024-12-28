@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabadell.rp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="menu container">
+        <a href="#" class="logo">logo</a>
+        <input type="checkbox" id="menu">
+        <label for="menu">
+            <img src="imagenes/sabadell.rp.webp" class="menu-icono" alt="Logo">
+        </label>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#" id="servicios-btn">Servicios</a></li>
+                <li><a href="#" id="productos-btn">Productos</a></li>
+                <li><a href="#" id="contacto-btn">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="header-content container">
+        <div class="header-txt">
+            <h1>Sabadell.rp</h1>
+            <p>
+                Sabadell.rp, un servidor de roleplay inspirado en Barcelona/Sabadell, es un servidor de rol serio 100% hispano. 
+                <a href="#" class="btm-1">Información</a>
+            </p>
+        </div>        
+    </div>
+</header>
+
+<section class="general container">
+    <h2>Sabadell.RP</h2>
+    <div class="general-container">
+        <div class="general-1 txt">
+            <h3>-TRABAJOS</h3>
+            <p>
+                En sabadell.rp contamos con varios trabajos de rol, los cuales son: Mossos d'Esquadra, Policía municipal, S-E-M (Cuerpo de salud), Bomberos, D-G-T y otros trabajos secundarios.
+            </p>
+        </div>
+        <div class="general-2 txt">
+            <h3>-TRABAJOS DE OFICIO</h3>
+            <p>
+                En sabadell.rp contamos con trabajos de oficio los cuales son: Abogado (abogado de oficio o privado), Autónomo (dueño de empresa).
+            </p>
+        </div>
+        <div class="general-3 txt">
+            <h3>CRIMINAL</h3>
+            <p>
+                Los criminales tienen una amplia variedad de elección, ya que pueden formar mafias, bandas, etc. Los criminales son los que roban a las empresas (pero tienen su reglamento y normas).
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="info-1">
+    <div class="info-content container">
+        <h2>-INFORMACION</h2>
+        <div class="info-circle">
+            <div class="circle-txt">
+                <div class="circle-1">
+                    <!-- Alineado a la izquierda -->
+                    <h2 style="text-align: left;">roleplay</h2>
+                </div>
+                <p>
+                    En Sabadell.rp contamos con un rol serio gracias a nuestro equipo directivo de staff, gracias a ellos podemos tener un orden en el rol. 
+                    Los staff están obligados a ver a cada usuario y sancionar su mal comportamiento.  
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="info-2">
+    <div class="info-content container">
+        <h2>Testimonios</h2>
+        <div class="testi">
+            <div class="testi-left">
+                <div class="testi-txt">
+                    <img src="imagenes/1735042858073.webp" alt="">
+                    <h3>INFORMACION EXTRA</h3>
+                    <p>
+                        1· El apartado de productos muestra los productos que futuramente  se añadirán, de momento no están disponibles.
+
+                        2· El apartado de contacto muestra el servidor de "DISCORD" y el G-mail para soporte técnico .
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal de Servicios -->
+<div id="servicios-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Servicios de Sabadell.rp</h2>
+        <p>Sabadell.rp tiene buenos servicios, contamos con bots propios y servicios únicos en el roleplay.</p>
+    </div>
+</div>
+
+<!-- Modal de Productos -->
+<div id="productos-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Productos</h2>
+    <div class="imagenes">
+      <img src="imagenes/camiseta de sabadell.rp.webp" alt="Producto 1">
+      <img src="imagenes/producto2.jpg" alt="Producto 2">
+      <img src="imagenes/producto3.jpg" alt="Producto 3">
+    </div>
+  </div>
+</div>
+
+<!-- Modal de Contacto -->
+<div id="contacto-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Contacto</h2>
+        <p>Puedes contactarnos mediante:</p>
+        <ul>
+            <li><a href="https://discord.gg/NtNadQkCcP" target="_blank">Unete al Discord</a></li>
+            <li>Envíanos un correo: <a href="mailto:sabadell.rp.com@gmail.com">sabadell.rp.com@gmail.com</a></li>
+        </ul>
+    </div>
+</div>
+
+<script>
+// Modal de Servicios
+const serviciosBtn = document.getElementById("servicios-btn");
+const serviciosModal = document.getElementById("servicios-modal");
+const serviciosClose = serviciosModal.querySelector(".close");
+
+// Abrir el modal de Servicios
+serviciosBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    serviciosModal.style.display = "flex";
+});
+
+// Cerrar el modal de Servicios
+serviciosClose.addEventListener("click", () => {
+    serviciosModal.style.display = "none";
+});
+
+// Modal de Productos
+const productosBtn = document.getElementById("productos-btn");
+const productosModal = document.getElementById("productos-modal");
+const productosClose = productosModal.querySelector(".close");
+
+// Abrir el modal de Productos
+productosBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    productosModal.style.display = "flex";
+});
+
+// Cerrar el modal de Productos
+productosClose.addEventListener("click", () => {
+    productosModal.style.display = "none";
+});
+
+// Modal de Contacto
+const contactoBtn = document.getElementById("contacto-btn");
+const contactoModal = document.getElementById("contacto-modal");
+const contactoClose = contactoModal.querySelector(".close");
+
+// Abrir el modal de Contacto
+contactoBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    contactoModal.style.display = "flex";
+});
+
+// Cerrar el modal de Contacto
+contactoClose.addEventListener("click", () => {
+    contactoModal.style.display = "none";
+});
+
+// Cerrar cualquier modal al hacer clic fuera del contenido
+window.addEventListener("click", (e) => {
+    if (e.target === productosModal) {
+        productosModal.style.display = "none";
+    }
+    if (e.target === contactoModal) {
+        contactoModal.style.display = "none";
+    }
+    if (e.target === serviciosModal) {
+        serviciosModal.style.display = "none";
+    }
+});
+</script>
+</body>
+</html>
+
